@@ -6,7 +6,7 @@ import { Prisma } from "@prisma/client";
 // temporary owner (replace with real auth later)
 const CURRENT_OWNER = "demo-owner";
 
-// ✅ Get one buyer
+//  Get one buyer
 export async function GET(
   req: Request,
   { params }: { params: { id: string } }
@@ -21,7 +21,7 @@ export async function GET(
   return NextResponse.json(buyer);
 }
 
-// ✅ Update buyer
+//  Update buyer
 export async function PUT(
   req: Request,
   { params }: { params: { id: string } }
@@ -95,7 +95,7 @@ export async function PUT(
   }
 }
 
-// ✅ Delete buyer
+//  Delete buyer
 export async function DELETE(
   req: Request,
   { params }: { params: { id: string } }
@@ -130,3 +130,4 @@ export async function DELETE(
     return NextResponse.json({ error: "Delete failed" }, { status: 500 });
   }
 }
+
