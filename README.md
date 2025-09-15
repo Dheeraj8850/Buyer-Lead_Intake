@@ -6,8 +6,6 @@ First, run the development server:
 
 ```bash
 npm run dev
-#and
-npx prisma studio
 # or
 yarn dev
 # or
