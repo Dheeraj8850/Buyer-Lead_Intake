@@ -6,7 +6,7 @@ import { Prisma } from "@prisma/client";
 // temporary hardcoded owner (replace with auth later)
 const CURRENT_OWNER = "demo-owner";
 
-// ✅ Get all buyers (ordered by updatedAt desc)
+//  Get all buyers (ordered by updatedAt desc)
 export async function GET() {
   const buyers = await prisma.buyer.findMany({
     orderBy: { updatedAt: "desc" },
@@ -14,7 +14,7 @@ export async function GET() {
   return NextResponse.json(buyers);
 }
 
-// ✅ Create a new buyer
+//  Create a new buyer
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -71,3 +71,4 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
+
